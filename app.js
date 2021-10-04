@@ -1,8 +1,20 @@
-// import functions and grab DOM elements
+const userGuess = document.getElementById('user-guess');
+const Button = document.getElementById('button');
+const userMessage = document.getElementById('user-message');
 
-// initialize global state
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+const randomNum = (Math.floor(Math.random() * 20)) + 1;
+//console.log((Math.floor(Math.random() * 20)) + 1);
+let initialGuess = 4;
+
+Button.addEventListener('click', () => {
+  initialGuess--;
+  console.log(initialGuess);
+
+  if (initialGuess<1){
+    document.getElementById('button').disabled = true;
+  }
+
+  
+
+});
